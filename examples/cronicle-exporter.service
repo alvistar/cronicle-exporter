@@ -1,0 +1,13 @@
+[Unit]
+Description=Cronicle Exporter
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/cronicle-exporter --url=https://your-cronicle-url --api-key=your-api-key
+Restart=always
+RestartSec=30
+User=cronicle-exporter
+Group=cronicle-exporter
+
+[Install]
+WantedBy=multi-user.target
