@@ -35,13 +35,14 @@ def main(port: int, url: str, api_key: str) -> int:
         logging.info(f"Retrieved {len(schedule)} schedule events")
 
         for event in schedule:
-            last_event = api_client.get_last_event(event["id"])
-            event_title = last_event["event_title"]
+            if event["enabled"] == 1:
+                last_event = api_client.get_last_event(event["id"])
+                event_title = last_event["event_title"]
 
-            if last_event:
-                TIME_START.labels(event_title).set(last_event["time_start"])
-                ELAPSED.labels(event_title).set(last_event["elapsed"])
-                EXIT_CODE.labels(event_title).set(last_event["code"])
+                if last_event:
+                    TIME_START.labels(event_title).set(last_event["time_start"])
+                    ELAPSED.labels(event_title).set(last_event["elapsed"])
+                    EXIT_CODE.labels(event_title).set(last_event["code"])
 
         # Sleep for a while before the next update
         time.sleep(60)  # Update every minute
