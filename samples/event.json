@@ -1,0 +1,43 @@
+{
+  "code": 0,
+  "list": {
+    "first_page": 0,
+    "last_page": 0,
+    "length": 4,
+    "page_size": 50,
+    "type": "list"
+  },
+  "rows": [
+    {
+      "action": "job_complete",
+      "category": "cm0kx6c2d04",
+      "category_title": "Kopia",
+      "code": 0,
+      "cpu": {
+        "count": 7,
+        "current": 222.5,
+        "max": 267.7,
+        "min": 7.3,
+        "total": 1185.9
+      },
+      "elapsed": 80.46399998664856,
+      "epoch": 1725285680,
+      "event": "em0kxmgx307",
+      "event_title": "immich-backup",
+      "hostname": "pinguino",
+      "id": "jm0l2i0wg0j",
+      "log_file_size": 398,
+      "mem": {
+        "count": 7,
+        "current": 249257984,
+        "max": 249257984,
+        "min": 192122880,
+        "total": 1569878016
+      },
+      "perf": "",
+      "plugin": "shellplug",
+      "plugin_title": "Shell Script",
+      "time_start": 1725285600.016
+    }
+  ]
+}

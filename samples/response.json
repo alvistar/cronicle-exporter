@@ -1,0 +1,285 @@
+{
+  "code": 0,
+  "list": {
+    "first_page": 0,
+    "last_page": 0,
+    "length": 6,
+    "page_size": 50,
+    "type": "list"
+  },
+  "rows": [
+    {
+      "algo": "random",
+      "catch_up": 0,
+      "category": "cm0kx6c2d04",
+      "chain": "",
+      "chain_error": "",
+      "cpu_limit": 0,
+      "cpu_sustain": 0,
+      "created": 1725278080,
+      "detached": 0,
+      "enabled": 1,
+      "id": "em0ky0ure0e",
+      "log_max_size": 0,
+      "max_children": 1,
+      "memory_limit": 0,
+      "memory_sustain": 0,
+      "modified": 1725278080,
+      "multiplex": 0,
+      "notes": "",
+      "notify_fail": "",
+      "notify_success": "",
+      "params": {
+        "annotate": 0,
+        "json": 0,
+        "script": "#!/bin/sh\n\nkopia-exporter snapshot /mnt/fsrevolution/k3vols/radarr/Backups --pushgateway https://pushgateway.cluster.thealvistar.com"
+      },
+      "plugin": "shellplug",
+      "queue": 0,
+      "queue_max": 1000,
+      "retries": 0,
+      "retry_delay": 0,
+      "stagger": 0,
+      "target": "pinguino",
+      "timeout": 3600,
+      "timezone": "Europe/Rome",
+      "timing": {
+        "hours": [
+          13
+        ],
+        "minutes": [
+          0
+        ]
+      },
+      "title": "radarr-backup",
+      "username": "admin",
+      "web_hook": ""
+    },
+    {
+      "algo": "random",
+      "catch_up": 0,
+      "category": "cm0kx6c2d04",
+      "chain": "",
+      "chain_error": "",
+      "cpu_limit": 0,
+      "cpu_sustain": 0,
+      "created": 1725277837,
+      "detached": 0,
+      "enabled": 1,
+      "id": "em0kxvn6x0b",
+      "log_max_size": 0,
+      "max_children": 1,
+      "memory_limit": 0,
+      "memory_sustain": 0,
+      "modified": 1725277976,
+      "multiplex": 0,
+      "notes": "",
+      "notify_fail": "",
+      "notify_success": "",
+      "params": {
+        "annotate": 0,
+        "json": 0,
+        "script": "#!/bin/sh\n\nkopia-exporter snapshot /mnt/fsrevolution/k3vols/bazarr/backup --pushgateway https://pushgateway.cluster.thealvistar.com"
+      },
+      "plugin": "shellplug",
+      "queue": 0,
+      "queue_max": 1000,
+      "retries": 0,
+      "retry_delay": 0,
+      "stagger": 0,
+      "target": "pinguino",
+      "timeout": 3600,
+      "timezone": "Europe/Rome",
+      "timing": {
+        "hours": [
+          13
+        ],
+        "minutes": [
+          0
+        ]
+      },
+      "title": "bazarr-backup",
+      "username": "admin",
+      "web_hook": ""
+    },
+    {
+      "algo": "random",
+      "catch_up": 0,
+      "category": "cm0kx6c2d04",
+      "chain": "",
+      "chain_error": "",
+      "cpu_limit": 0,
+      "cpu_sustain": 0,
+      "created": 1725277660,
+      "detached": 0,
+      "enabled": 1,
+      "id": "em0kxrurb09",
+      "log_max_size": 0,
+      "max_children": 1,
+      "memory_limit": 0,
+      "memory_sustain": 0,
+      "modified": 1725277660,
+      "multiplex": 0,
+      "notes": "",
+      "notify_fail": "",
+      "notify_success": "",
+      "params": {
+        "annotate": 0,
+        "json": 0,
+        "script": "#!/bin/sh\n\nkopia-exporter snapshot /mnt/fsrevolution/k3vols/sonarr/Backups --pushgateway https://pushgateway.cluster.thealvistar.com"
+      },
+      "plugin": "shellplug",
+      "queue": 0,
+      "queue_max": 1000,
+      "retries": 0,
+      "retry_delay": 0,
+      "stagger": 0,
+      "target": "pinguino",
+      "timeout": 3600,
+      "timezone": "Europe/Rome",
+      "timing": {
+        "hours": [
+          13
+        ],
+        "minutes": [
+          0
+        ]
+      },
+      "title": "sonarr-backup",
+      "username": "admin",
+      "web_hook": ""
+    },
+    {
+      "algo": "random",
+      "catch_up": 0,
+      "category": "cm0kx6c2d04",
+      "chain": "",
+      "chain_error": "",
+      "cpu_limit": 0,
+      "cpu_sustain": 0,
+      "created": 1725277409,
+      "detached": 0,
+      "enabled": 1,
+      "id": "em0kxmgx307",
+      "log_max_size": 0,
+      "max_children": 1,
+      "memory_limit": 0,
+      "memory_sustain": 0,
+      "modified": 1725277409,
+      "multiplex": 0,
+      "notes": "",
+      "notify_fail": "",
+      "notify_success": "",
+      "params": {
+        "annotate": 0,
+        "json": 0,
+        "script": "#!/bin/sh\n\nkopia-exporter snapshot -z fsrevolution/k3vols/immich@kopia -o /mnt/fsrevolution/k3vols/immich /mnt/fsrevolution/k3vols/immich/.zfs/snapshot/kopia --pushgateway https://pushgateway.cluster.thealvistar.com"
+      },
+      "plugin": "shellplug",
+      "queue": 0,
+      "queue_max": 1000,
+      "retries": 0,
+      "retry_delay": 0,
+      "stagger": 0,
+      "target": "pinguino",
+      "timeout": 3600,
+      "timezone": "Europe/Rome",
+      "timing": {
+        "minutes": [
+          0
+        ]
+      },
+      "title": "immich-backup",
+      "username": "admin",
+      "web_hook": ""
+    },
+    {
+      "algo": "random",
+      "catch_up": 0,
+      "category": "cm0kx6c2d04",
+      "chain": "",
+      "chain_error": "",
+      "cpu_limit": 0,
+      "cpu_sustain": 0,
+      "created": 1725277186,
+      "detached": 0,
+      "enabled": 1,
+      "id": "em0kxhp6z05",
+      "log_max_size": 0,
+      "max_children": 1,
+      "memory_limit": 0,
+      "memory_sustain": 0,
+      "modified": 1725277186,
+      "multiplex": 0,
+      "notes": "",
+      "notify_fail": "",
+      "notify_success": "",
+      "params": {
+        "annotate": 0,
+        "json": 0,
+        "script": "#!/bin/sh\n\nkopia-exporter snapshot -z fsrevolution/k3vols/postgres@kopia -o /mnt/fsrevolution/k3vols/postgres /mnt/fsrevolution/k3vols/postgres/.zfs/snapshot/kopia --pushgateway https://pushgateway.cluster.thealvistar.com"
+      },
+      "plugin": "shellplug",
+      "queue": 0,
+      "queue_max": 1000,
+      "retries": 0,
+      "retry_delay": 0,
+      "stagger": 0,
+      "target": "pinguino",
+      "timeout": 3600,
+      "timezone": "Europe/Rome",
+      "timing": {
+        "minutes": [
+          0
+        ]
+      },
+      "title": "postgres-backup",
+      "username": "admin",
+      "web_hook": ""
+    },
+    {
+      "algo": "random",
+      "catch_up": 0,
+      "category": "cm0kx6c2d04",
+      "chain": "",
+      "chain_error": "",
+      "cpu_limit": 0,
+      "cpu_sustain": 0,
+      "created": 1725272049,
+      "detached": 0,
+      "enabled": 1,
+      "id": "em0kuflcc03",
+      "log_max_size": 0,
+      "max_children": 1,
+      "memory_limit": 0,
+      "memory_sustain": 0,
+      "modified": 1725276677,
+      "multiplex": 0,
+      "notes": "",
+      "notify_fail": "",
+      "notify_success": "",
+      "params": {
+        "annotate": 0,
+        "json": 0,
+        "script": "#!/bin/sh\n\nkopia-exporter snapshot -z fsrevolution/k3vols/immich-postgres@kopia -o /mnt/fsrevolution/k3vols/immich-postgres /mnt/fsrevolution/k3vols/immich-postgres/.zfs/snapshot/kopia --pushgateway https://pushgateway.cluster.thealvistar.com"
+      },
+      "plugin": "shellplug",
+      "queue": 0,
+      "queue_max": 1000,
+      "retries": 0,
+      "retry_delay": 0,
+      "stagger": 0,
+      "target": "pinguino",
+      "timeout": 3600,
+      "timezone": "Europe/Rome",
+      "timing": {
+        "minutes": [
+          0
+        ]
+      },
+      "title": "immich-postgres-backup",
+      "username": "admin",
+      "web_hook": ""
+    }
+  ]
+}

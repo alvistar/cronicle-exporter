@@ -1,7 +1,7 @@
 import click
 import logging
-import requests
-from typing import Dict, Any, List
+
+from cronicle_exporter.api_client import ApiClient
 
 # Configuring logging
 logging.basicConfig(
@@ -10,44 +10,16 @@ logging.basicConfig(
 )
 
 
-def get_schedule(url: str, api_key: str) -> List[Dict[str, Any]]:
-    """
-    Fetch schedule events from the Cronicle API.
-
-    Args:
-    url (str): The base URL of the Cronicle API.
-    api_key (str): The API key for authentication.
-
-    Returns:
-    List[Dict[str, Any]]: A list of schedule event objects.
-    """
-    endpoint = f"{url}/api/app/get_schedule/v1"
-    headers = {"X-API-Key": api_key}
-
-    try:
-        response = requests.get(endpoint, headers=headers)
-        response.raise_for_status()
-        return _parse_schedule_response(response.json())
-    except requests.RequestException as e:
-        logging.error(f"Error fetching schedule: {e}")
-        return []
-
-
-def _parse_schedule_response(data: Dict[str, Any]) -> List[Dict[str, Any]]:
-    if data.get("code") == 0 and "rows" in data:
-        return data["rows"]
-    else:
-        logging.error(f"Unexpected response format: {data}")
-        return []
-
-
 @click.command()
 @click.option("--port", default=8123, help="The port to listen on.")
 @click.option("--url", required=True, help="The base URL of the Cronicle API.")
 @click.option("--api-key", required=True, help="The API key for authentication.")
 def main(port: int, url: str, api_key: str) -> int:
-    logging.info(f"Fetching schedule from {url}")
-    schedule = get_schedule(url, api_key)
+    logging.info(f"Initializing API client with base URL: {url}")
+    api_client = ApiClient(url, api_key)
+
+    logging.info("Fetching schedule")
+    schedule = api_client.get_schedule()
     logging.info(f"Retrieved {len(schedule)} schedule events")
     logging.info(f"Cronicle-exporter listening on port {port}")
     # TODO: Implement exporter logic here
