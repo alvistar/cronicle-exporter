@@ -10,7 +10,17 @@
 #   universal: false
 
 -e file:.
+certifi==2024.8.30
+    # via requests
+charset-normalizer==3.3.2
+    # via requests
 click==8.1.7
     # via cronicle-exporter
+idna==3.8
+    # via requests
 prometheus-client==0.20.0
     # via cronicle-exporter
+requests==2.32.3
+    # via cronicle-exporter
+urllib3==2.2.2
+    # via requests

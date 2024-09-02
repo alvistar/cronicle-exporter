@@ -8,6 +8,7 @@ authors = [
 dependencies = [
     "prometheus-client>=0.20.0",
     "click>=8.1.7",
+    "requests>=2.32.3",
 ]
 readme = "README.md"
 requires-python = ">= 3.8"
@@ -21,7 +22,9 @@ build-backend = "hatchling.build"
 
 [tool.rye]
 managed = true
-dev-dependencies = []
+dev-dependencies = [
+    "pytest>=8.3.2",
+]
 
 [tool.hatch.metadata]
 allow-direct-references = true

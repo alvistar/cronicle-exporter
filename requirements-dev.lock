@@ -10,7 +10,24 @@
 #   universal: false
 
 -e file:.
+certifi==2024.8.30
+    # via requests
+charset-normalizer==3.3.2
+    # via requests
 click==8.1.7
     # via cronicle-exporter
+idna==3.8
+    # via requests
+iniconfig==2.0.0
+    # via pytest
+packaging==24.1
+    # via pytest
+pluggy==1.5.0
+    # via pytest
 prometheus-client==0.20.0
     # via cronicle-exporter
+pytest==8.3.2
+requests==2.32.3
+    # via cronicle-exporter
+urllib3==2.2.2
+    # via requests
