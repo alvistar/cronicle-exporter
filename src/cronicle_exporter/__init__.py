@@ -46,10 +46,10 @@ def _parse_schedule_response(data: Dict[str, Any]) -> List[Dict[str, Any]]:
 @click.option("--url", required=True, help="The base URL of the Cronicle API.")
 @click.option("--api-key", required=True, help="The API key for authentication.")
 def main(port: int, url: str, api_key: str) -> int:
-    print(f"Fetching schedule from {url}")
+    logging.info(f"Fetching schedule from {url}")
     schedule = get_schedule(url, api_key)
-    print(f"Retrieved {len(schedule)} schedule events")
-    print(f"Cronicle-exporter listening on port {port}")
+    logging.info(f"Retrieved {len(schedule)} schedule events")
+    logging.info(f"Cronicle-exporter listening on port {port}")
     # TODO: Implement exporter logic here
     return 0
 
